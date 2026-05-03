@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Product, formatPrice, getWhatsAppLink } from "../data/menu";
 
 interface ProductCardProps {
@@ -13,12 +14,14 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
       className="group relative flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-fade-in-up"
       style={{ animationDelay: `${index * 100}ms` }}
     >
-      <div className="relative flex h-44 items-center justify-center bg-muted">
-        <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 text-primary">
-          <svg className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.617A2.993 2.993 0 009.75 9.75c.896 0 1.7.393 2.25 1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.617m-16.5 0V13.5m16.5 0V13.5" />
-          </svg>
-        </div>
+      <div className="relative flex h-44 items-center justify-center bg-muted overflow-hidden">
+        <Image
+          src={product.image}
+          alt={product.name}
+          width={400}
+          height={176}
+          className="object-cover w-full h-full"
+        />
         {product.popular && (
           <span className="absolute right-3 top-3 rounded-full bg-accent px-2.5 py-1 text-xs font-bold text-dark shadow-sm">
             Popular

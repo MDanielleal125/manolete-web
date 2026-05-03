@@ -4,6 +4,7 @@ export interface Product {
   description: string;
   price: number;
   category: string;
+  image: string;
   popular?: boolean;
 }
 
@@ -20,25 +21,28 @@ export const categories: Category[] = [
     products: [
       {
         id: "h1",
-        name: "Hamburguesa Sencilla",
+        name: "Hamburguesa Corriente",
         description: "Carne de res, lechuga, tomate, cebolla, queso y salsas",
         price: 12000,
         category: "hamburguesas-clasicas",
+        image: "/images/menu/hamburguesa-corriente.jpg",
         popular: true,
       },
       {
         id: "h2",
-        name: "Hamburguesa Doble",
+        name: "Hamburguesa Super Especial",
         description: "Doble carne, doble queso, lechuga, tomate, cebolla y salsas",
         price: 18000,
         category: "hamburguesas-clasicas",
+        image: "/images/menu/hamburguesa-super-especial.jpg",
       },
       {
         id: "h3",
-        name: "Hamburguesa con Tocineta",
+        name: "Hamburguesa Especial",
         description: "Carne de res, tocineta crujiente, queso, lechuga y tomate",
         price: 16000,
         category: "hamburguesas-clasicas",
+        image: "/images/menu/hamburguesa-especial.jpg",
         popular: true,
       },
     ],
@@ -53,6 +57,7 @@ export const categories: Category[] = [
         description: "Carne de res, pollo, tocineta, huevo, queso, piña y salsas especiales",
         price: 25000,
         category: "hamburguesas-especiales",
+        image: "/images/menu/hamburguesa-manolete.jpg",
         popular: true,
       },
       {
@@ -61,6 +66,7 @@ export const categories: Category[] = [
         description: "Carne de res, salsa BBQ, cebolla caramelizada, tocineta y queso cheddar",
         price: 22000,
         category: "hamburguesas-especiales",
+        image: "/images/menu/hamburguesa-bbq.jpg",
       },
       {
         id: "he3",
@@ -68,6 +74,7 @@ export const categories: Category[] = [
         description: "Carne de res, guacamole, jalapeños, nachos, queso y salsa mexicana",
         price: 23000,
         category: "hamburguesas-especiales",
+        image: "/images/menu/hamburguesa-mexicana.jpg",
       },
       {
         id: "he4",
@@ -75,6 +82,7 @@ export const categories: Category[] = [
         description: "Carne de res, piña caramelizada, jamón, queso mozzarella y salsa rosada",
         price: 21000,
         category: "hamburguesas-especiales",
+        image: "/images/menu/hamburguesa-hawaiana.jpg",
       },
     ],
   },
@@ -88,6 +96,7 @@ export const categories: Category[] = [
         description: "Salchicha americana, cebolla, salsa de tomate, mayonesa y mostaza",
         price: 8000,
         category: "perros-calientes",
+        image: "/images/menu/perro-sencillo.jpg",
       },
       {
         id: "pc2",
@@ -95,6 +104,7 @@ export const categories: Category[] = [
         description: "Salchicha americana, tocineta, queso, cebolla caramelizada y salsas",
         price: 13000,
         category: "perros-calientes",
+        image: "/images/menu/perro-especial.jpg",
         popular: true,
       },
       {
@@ -103,6 +113,7 @@ export const categories: Category[] = [
         description: "Salchicha americana, guacamole, jalapeños, nachos y salsa mexicana",
         price: 15000,
         category: "perros-calientes",
+        image: "/images/menu/perro-mexicano.jpg",
       },
     ],
   },
@@ -116,6 +127,7 @@ export const categories: Category[] = [
         description: "Porción de papas fritas crocantes con salsa de tomate y mayonesa",
         price: 8000,
         category: "papas-salchipapas",
+        image: "/images/menu/papas-francesa.jpg",
       },
       {
         id: "ps2",
@@ -123,6 +135,7 @@ export const categories: Category[] = [
         description: "Papas fritas con salchicha americana y salsas",
         price: 12000,
         category: "papas-salchipapas",
+        image: "/images/menu/salchipapas-sencillas.jpg",
         popular: true,
       },
       {
@@ -131,6 +144,7 @@ export const categories: Category[] = [
         description: "Papas fritas, salchicha, queso gratinado, tocineta y salsas",
         price: 18000,
         category: "papas-salchipapas",
+        image: "/images/menu/salchipapas-especial.jpg",
       },
       {
         id: "ps4",
@@ -138,6 +152,7 @@ export const categories: Category[] = [
         description: "Papas fritas, salchicha, pollo desmechado, queso, huevo y salsas especiales",
         price: 25000,
         category: "papas-salchipapas",
+        image: "/images/menu/salchipapas-manolete.jpg",
         popular: true,
       },
     ],
@@ -152,6 +167,7 @@ export const categories: Category[] = [
         description: "Maíz desgranado, pollo desmechado, queso gratinado, papas fritas y salsas",
         price: 20000,
         category: "desgranados",
+        image: "/images/menu/desgranado-pollo.jpg",
         popular: true,
       },
       {
@@ -160,6 +176,7 @@ export const categories: Category[] = [
         description: "Maíz desgranado, carne desmechada, queso gratinado, papas fritas y salsas",
         price: 22000,
         category: "desgranados",
+        image: "/images/menu/desgranado-carne.jpg",
       },
       {
         id: "d3",
@@ -167,6 +184,7 @@ export const categories: Category[] = [
         description: "Maíz desgranado, pollo, carne, queso, huevo, papas fritas y salsas",
         price: 26000,
         category: "desgranados",
+        image: "/images/menu/desgranado-mixto.jpg",
         popular: true,
       },
     ],
@@ -181,6 +199,7 @@ export const categories: Category[] = [
         description: "Jugosa punta de anca a la parrilla con papas y ensalada",
         price: 28000,
         category: "carnes",
+        image: "/images/menu/punta-anca.jpg",
       },
       {
         id: "c2",
@@ -188,6 +207,7 @@ export const categories: Category[] = [
         description: "Churrasco de res a la parrilla con papas y ensalada",
         price: 26000,
         category: "carnes",
+        image: "/images/menu/churrasco.jpg",
         popular: true,
       },
       {
@@ -196,6 +216,7 @@ export const categories: Category[] = [
         description: "Baby beef tierno con papas a la francesa y ensalada",
         price: 30000,
         category: "carnes",
+        image: "/images/menu/baby-beef.jpg",
       },
     ],
   },
@@ -209,6 +230,7 @@ export const categories: Category[] = [
         description: "Papas fritas, salchicha, butifarra, chorizo, carne, pollo y queso (2 personas)",
         price: 35000,
         category: "picadas",
+        image: "/images/menu/picada-pequena.jpg",
       },
       {
         id: "p2",
@@ -216,6 +238,7 @@ export const categories: Category[] = [
         description: "Papas fritas, salchicha, butifarra, chorizo, carne, pollo, tocineta y queso (4 personas)",
         price: 55000,
         category: "picadas",
+        image: "/images/menu/picada-mediana.jpg",
         popular: true,
       },
       {
@@ -224,6 +247,7 @@ export const categories: Category[] = [
         description: "Gran porción de papas fritas, salchicha, butifarra, chorizo, carne, pollo, tocineta, huevo y queso (6 personas)",
         price: 80000,
         category: "picadas",
+        image: "/images/menu/picada-familiar.jpg",
         popular: true,
       },
     ],
@@ -238,6 +262,7 @@ export const categories: Category[] = [
         description: "Coca-Cola, Sprite o Postobón 400ml",
         price: 4000,
         category: "bebidas",
+        image: "/images/menu/gaseosa-personal.jpg",
       },
       {
         id: "b2",
@@ -245,6 +270,7 @@ export const categories: Category[] = [
         description: "Coca-Cola, Sprite o Postobón 1.5 litros",
         price: 8000,
         category: "bebidas",
+        image: "/images/menu/gaseosa-15l.jpg",
       },
       {
         id: "b3",
@@ -252,6 +278,7 @@ export const categories: Category[] = [
         description: "Jugo de mango, maracuyá, mora o lulo en agua o leche",
         price: 6000,
         category: "bebidas",
+        image: "/images/menu/jugo-natural.jpg",
         popular: true,
       },
       {
@@ -260,6 +287,7 @@ export const categories: Category[] = [
         description: "Limonada natural, cerezada o coco",
         price: 5000,
         category: "bebidas",
+        image: "/images/menu/limonada.jpg",
       },
       {
         id: "b5",
@@ -267,6 +295,7 @@ export const categories: Category[] = [
         description: "Cerveza nacional en lata o botella",
         price: 5000,
         category: "bebidas",
+        image: "/images/menu/cerveza.jpg",
       },
     ],
   },
@@ -280,6 +309,7 @@ export const categories: Category[] = [
         description: "Porción adicional de queso",
         price: 3000,
         category: "adicionales",
+        image: "/images/menu/queso-extra.jpg",
       },
       {
         id: "a2",
@@ -287,6 +317,7 @@ export const categories: Category[] = [
         description: "Porción adicional de tocineta crujiente",
         price: 4000,
         category: "adicionales",
+        image: "/images/menu/tocineta-extra.jpg",
       },
       {
         id: "a3",
@@ -294,6 +325,7 @@ export const categories: Category[] = [
         description: "Huevo frito adicional",
         price: 2000,
         category: "adicionales",
+        image: "/images/menu/huevo-extra.jpg",
       },
       {
         id: "a4",
@@ -301,6 +333,7 @@ export const categories: Category[] = [
         description: "Carne de res adicional",
         price: 7000,
         category: "adicionales",
+        image: "/images/menu/carne-extra.jpg",
       },
       {
         id: "a5",
@@ -308,6 +341,7 @@ export const categories: Category[] = [
         description: "Porción adicional de papas a la francesa",
         price: 5000,
         category: "adicionales",
+        image: "/images/menu/papas-extra.jpg",
       },
     ],
   },

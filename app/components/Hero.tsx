@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getGeneralWhatsAppLink } from "../data/menu";
 
 export default function Hero() {
@@ -6,6 +7,18 @@ export default function Hero() {
       id="inicio"
       className="relative flex min-h-[90vh] items-center justify-center overflow-hidden bg-dark pt-16"
     >
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero/edificio.jpg"
+          alt="Comidas Rápidas Manolete"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
+      <div className="absolute inset-0 bg-black/70" />
+
       <div className="absolute inset-0 opacity-20">
         <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
           <defs>
